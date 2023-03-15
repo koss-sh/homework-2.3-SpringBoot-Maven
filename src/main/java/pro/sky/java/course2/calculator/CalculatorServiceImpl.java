@@ -8,10 +8,12 @@ public class CalculatorServiceImpl implements CalculatorService {
     public String showWelcome() {
         return "Добро пожаловать в калькулятор";
     }
+
     @Override
     public int addNumbers(int num1, int num2) {
         return num1 + num2;
     }
+
     @Override
     public int subtractNumbers(int num1, int num2) {
         return num1 - num2;
@@ -20,6 +22,7 @@ public class CalculatorServiceImpl implements CalculatorService {
     public int multiplicateNumbers(int num1, int num2) {
         return num1 * num2;
     }
+
     @Override
     public int divideNumbers(int num1, int num2) {
         return num1 / num2;

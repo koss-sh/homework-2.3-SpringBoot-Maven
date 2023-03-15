@@ -12,24 +12,30 @@ public class CalculatorController {
     public CalculatorController(CalculatorService calculatorService) {
         this.calculatorService = calculatorService;
     }
+
     @GetMapping
     public String showWelcome() {
         return calculatorService.showWelcome();
     }
+
     @GetMapping("/plus")
     public String showNumberAddition(@RequestParam int num1, @RequestParam int num2) {
         return num1+ " + " + num2 + " = " + calculatorService.addNumbers(num1, num2);
     }
+
     @GetMapping("/minus")
     public String showNumberSubtraction(@RequestParam int num1, @RequestParam int num2) {
         return num1+ " - " + num2 + " = " + calculatorService.subtractNumbers(num1, num2);
     }
+
     @GetMapping("/multiply")
     public String showNumberMultiplication(@RequestParam int num1, @RequestParam int num2) {
         return num1+ " * " + num2 + " = " + calculatorService.multiplicateNumbers(num1, num2);
     }
+
     @GetMapping("/divide")
     public String showNumberDivision(@RequestParam int num1, @RequestParam int num2) {
+        if (num2 == 0) return "Делить на 0 нельзя!";
         return num1+ " / " + num2 + " = " + calculatorService.divideNumbers(num1, num2);
     }
 
