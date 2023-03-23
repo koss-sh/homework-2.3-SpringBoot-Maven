@@ -5,7 +5,7 @@ public interface CalculatorService {
     int addNumbers(int num1, int num2);
     int subtractNumbers(int num1, int num2);
     int multiplicateNumbers(int num1, int num2);
-    int divideNumbers(int num1, int num2);
+    double divideNumbers(int num1, int num2);
 
 
 
